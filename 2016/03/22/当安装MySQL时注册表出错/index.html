@@ -15,7 +15,7 @@
 	})();
 	</script>
   
-  <title>归档：2016 | 次元酱的博客</title>
+  <title>当安装MySQL时注册表出错 | 次元酱的博客</title>
   <meta name="author" content="lizhicheng">
   
   <meta name="description" content="Mr.Li的博客">
@@ -23,7 +23,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="当安装MySQL时注册表出错"/>
   <meta property="og:site_name" content="次元酱的博客"/>
 
   
@@ -211,78 +211,129 @@
 			</nav>			
 </div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title">2016</h2>
-
-<div class="archive">
-
-  <article class="post">
-	<div class="post-content">
-	  <header>
-		<time datetime="2016-03-22T07:06:34.000Z"><a href="/2016/03/22/当安装MySQL时注册表出错/">Mar 22 2016</a></time>
-		
-		  <h1 class="title"><a href="/2016/03/22/当安装MySQL时注册表出错/">当安装MySQL时注册表出错</a></h1>
-		
-	  </header>
-	</div>
-  </article>
-
-  <article class="post">
-	<div class="post-content">
-	  <header>
-		<time datetime="2016-03-21T13:18:11.000Z"><a href="/2016/03/21/关于JavaScript的onmouseover和onmouseout事件/">Mar 21 2016</a></time>
-		
-		  <h1 class="title"><a href="/2016/03/21/关于JavaScript的onmouseover和onmouseout事件/">关于JavaScript的onmouseover和onmouseout事件“</a></h1>
-		
-	  </header>
-	</div>
-  </article>
-
-  <article class="post">
-	<div class="post-content">
-	  <header>
-		<time datetime="2016-03-13T09:54:22.000Z"><a href="/2016/03/13/XMl颜色代码表/">Mar 13 2016</a></time>
-		
-		  <h1 class="title"><a href="/2016/03/13/XMl颜色代码表/">XMl颜色代码表</a></h1>
-		
-	  </header>
-	</div>
-  </article>
-
-  <article class="post">
-	<div class="post-content">
-	  <header>
-		<time datetime="2016-03-13T09:24:54.000Z"><a href="/2016/03/13/Eclispe-android-代码提示设置方法/">Mar 13 2016</a></time>
-		
-		  <h1 class="title"><a href="/2016/03/13/Eclispe-android-代码提示设置方法/">Eclispe android 代码提示设置方法</a></h1>
-		
-	  </header>
-	</div>
-  </article>
-
-  <article class="post">
-	<div class="post-content">
-	  <header>
-		<time datetime="2016-03-06T09:05:58.000Z"><a href="/2016/03/06/Hexo博客搭建方法-从此攀上白富美远离傻白甜！/">Mar 6 2016</a></time>
-		
-		  <h1 class="title"><a href="/2016/03/06/Hexo博客搭建方法-从此攀上白富美远离傻白甜！/">Hexo博客搭建方法(从此攀上白富美远离傻白甜！)</a></h1>
-		
-	  </header>
-	</div>
-  </article>
-
-  <article class="w">
-	<div class="post-content">
-	  <header>
-		<time datetime="2016-03-06T06:10:43.000Z"><a href="/2016/03/06/“欢迎来到次元酱的博客“/">Mar 6 2016</a></time>
-		
-		  <h1 class="title"><a href="/2016/03/06/“欢迎来到次元酱的博客“/">“欢迎来到次元酱的博客“</a></h1>
-		
-	  </header>
-	</div>
-  </article>
-
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
 </div>
+  
+  <div class="post-content">
+    <header class="article-info clearfix">
+  <h1 itemprop="name">
+	当安装MySQL时注册表出错
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://yoursite.com" title="lizhicheng">lizhicheng</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2016-03-22T07:06:34.000Z" itemprop="datePublished">Mar 22 2016</time>
+    更新日期:<time datetime="2016-03-22T07:07:26.158Z" itemprop="dateModified">Mar 22 2016</time>
+    
+  </p>
+</header>
+    <div class="entry">
+		
+        <p>一、   系统软件情况：</p>
+<pre><code>mysql-enterprise-gpl-5.0.80-win32;
+</code></pre><p>二、   出现的状况：</p>
+<pre><code>在使用MySQL Server Instance Config Wizard重新设置mysql默认字 符集
+重新启动mysql不成功， 提示 the service could not be started。
+</code></pre><p>三、   解决方法：</p>
+<pre><code>1. 在开始--&gt;&gt;运行中输入services.msc, 查看是否存在mysql的service 
+    如果存在，并且不能手动启动;
+2. 在开始--&gt;&gt;运行中输入regedit, 打开注册表，定位到
+         “HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services” , 删掉
+           mysql对应的service;
+3.  卸载mysql,  重新启动系统;
+4.  删除mysql的安装文件夹，并且删除mysql的数据存储文件, 重新启动系统;
+5.  安装并配置mysql。OK，搞定。
+</code></pre>
+    </div>
+    <footer>
+        
+        
+		<div class="bdsharebuttonbox">
+	<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+	<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_count" data-cmd="count"></a>
+</div>
+<script>
+window._bd_share_config=
+{
+	"common":{
+		"bdSnsKey":{},
+		"bdText":"",
+		"bdMini":"2",
+		"bdMiniList":false,
+		"bdPic":"",
+		"bdStyle":"0",
+		"bdSize":"24"
+	},
+	"share":{},
+	"image":{
+		"viewList":["qzone","tsina","tqq","renren","weixin","fbook","twi"],
+		"viewText":"分享到：",
+		"viewSize":"24"
+	},
+	"selectShare":{
+		"bdContainerClass":null,
+		"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","fbook","twi"]
+	}
+};
+with(document)0[
+	(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)
+];
+</script>    
+        <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+ <nav id="pagination" >
+    
+    
+    <a href="/2016/03/21/关于JavaScript的onmouseover和onmouseout事件/" class="alignright next" title="关于JavaScript的onmouseover和onmouseout事件“">关于JavaScript的onmouseover和onmouseout事件“</a>
+    
+    <div class="clearfix"></div>
+</nav>
+
+
+
+	
+	<section id="comment">
+		<!-- 多说评论框 start -->
+		<div class="ds-thread" data-thread-key="2016/03/22/当安装MySQL时注册表出错/" data-title="当安装MySQL时注册表出错" data-url="http://yoursite.com/2016/03/22/当安装MySQL时注册表出错/"></div>
+		<!-- 多说评论框 end -->
+		<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+		<script type="text/javascript">
+		var duoshuoQuery = {short_name:"chillax"};
+		(function() {
+			var ds = document.createElement('script');
+			ds.type = 'text/javascript';ds.async = true;
+			ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+			ds.charset = 'UTF-8';
+			(document.getElementsByTagName('head')[0] 
+			 || document.getElementsByTagName('body')[0]).appendChild(ds);
+		})();
+		</script>
+		<!-- 多说公共JS代码 end -->
+	</section>
+	
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
